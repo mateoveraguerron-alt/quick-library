@@ -1,0 +1,16 @@
+.card {
+  display: flex; align-items: center; gap: var(--space-sm); width: 100%;
+  padding: var(--space-sm) var(--space-md); border: none; cursor: pointer; text-align: left;
+  background: var(--bg-secondary); color: var(--text); font-family: var(--font-family);
+  border-radius: var(--radius-lg); box-shadow: var(--edge);
+  transition: background var(--transition-fast);
+}
+.card:hover { background: var(--bg-hover); }
+.card:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.selected { background: color-mix(in srgb, var(--accent) 14%, var(--bg-secondary)); }
+.selected:hover { background: color-mix(in srgb, var(--accent) 20%, var(--bg-secondary)); }
+
+.icon { flex-shrink: 0; color: var(--text-muted); }
+.selected .icon { color: var(--accent); }
+.text { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.check { flex-shrink: 0; color: var(--accent); }

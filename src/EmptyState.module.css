@@ -1,0 +1,7 @@
+.wrap { display: flex; flex-direction: column; align-items: center; gap: var(--space-sm); padding: var(--space-xl) var(--space-md); }
+.icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 64px; height: 64px; border-radius: var(--radius-full);
+  background: var(--bg-muted); color: var(--text-muted); margin-bottom: var(--space-xs);
+}
+.desc { max-width: 420px; }

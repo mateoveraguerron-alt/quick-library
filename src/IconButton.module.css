@@ -1,0 +1,27 @@
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+  border: none; cursor: pointer; padding: 0;
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast), transform var(--transition-fast), opacity var(--transition-fast);
+}
+.btn:active:not(:disabled) { transform: scale(0.94); }
+.btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.xs { width: 22px; height: 22px; }
+.sm { width: 28px; height: 28px; }
+.md { width: 36px; height: 36px; }
+.lg { width: 44px; height: 44px; }
+
+.ghost { background: transparent; color: var(--text-muted); }
+.ghost:hover:not(:disabled) { background: var(--bg-hover); color: var(--text); }
+.ghost:active:not(:disabled) { background: var(--bg-active); }
+
+.secondary { background: var(--bg-secondary); color: var(--text); box-shadow: var(--edge); }
+.secondary:hover:not(:disabled) { background: var(--bg-hover); }
+
+.primary { background: var(--accent); color: var(--on-accent); }
+.primary:hover:not(:disabled) { background: color-mix(in srgb, var(--accent), white 12%); }
+
+.danger { background: transparent; color: var(--error); }
+.danger:hover:not(:disabled) { background: var(--error-bg); }

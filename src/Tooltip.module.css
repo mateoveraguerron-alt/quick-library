@@ -1,0 +1,10 @@
+/* Invertido respecto al tema: siempre legible, sin bordes. */
+.content {
+  z-index: var(--z-tooltip); max-width: 280px;
+  padding: 4px 10px; border-radius: var(--radius-sm);
+  background: var(--text); color: var(--bg);
+  font-size: var(--font-xs); font-family: var(--font-family);
+  box-shadow: var(--shadow-md);
+  animation: fade var(--transition-fast);
+}
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }

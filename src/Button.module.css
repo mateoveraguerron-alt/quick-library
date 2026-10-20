@@ -1,0 +1,48 @@
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-sm);
+  border: none; cursor: pointer; user-select: none; white-space: nowrap;
+  font-family: var(--font-family); font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast), transform var(--transition-fast), opacity var(--transition-fast);
+  
+  /* EL FIX DEFINITIVO */
+  -webkit-appearance: none; /* Quita estilos nativos de macOS/Windows/Chromium */
+  appearance: none;
+  -webkit-tap-highlight-color: transparent; /* Quita el destello al hacer clic */
+  
+  /* Aseguramos que el contorno esté muerto */
+  outline: none;
+}
+
+.btn:active:not(:disabled) { 
+  transform: scale(0.98); 
+  outline: none;
+  /* Si el botón tenía una sombra, al presionar la quitamos para que no parezca una línea */
+  box-shadow: none; 
+}
+
+.btn:focus { outline: none; }
+.btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.sm { padding: 4px 12px;  font-size: var(--font-sm); }
+.md { padding: 8px 16px;  font-size: var(--font-md); }
+.lg { padding: 12px 24px; font-size: var(--font-lg); }
+.full { width: 100%; }
+
+.primary { background: var(--accent); color: var(--on-accent); }
+.primary:hover:not(:disabled) { background: color-mix(in srgb, var(--accent), white 12%); }
+
+.secondary { background: var(--bg-secondary); color: var(--text); box-shadow: var(--edge); }
+.secondary:hover:not(:disabled) { background: var(--bg-hover); }
+.secondary:active:not(:disabled) { background: var(--bg-active); box-shadow: var(--edge); /* Recuperamos la sombra si es un botón secundario */ }
+
+.ghost { background: transparent; color: var(--text); }
+.ghost:hover:not(:disabled) { background: var(--bg-hover); }
+.ghost:active:not(:disabled) { background: var(--bg-active); }
+
+.danger { background: var(--error); color: #fff; }
+.danger:hover:not(:disabled) { background: color-mix(in srgb, var(--error), white 12%); }
+
+.link { background: none; color: var(--accent); padding: 0; border-radius: var(--radius-sm); }
+.link:hover:not(:disabled) { text-decoration: underline; }

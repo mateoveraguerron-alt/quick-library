@@ -1,0 +1,15 @@
+.wrap { display: inline-flex; align-items: center; gap: var(--space-sm); cursor: pointer; }
+.disabled { opacity: 0.5; cursor: not-allowed; }
+.label { font-size: var(--font-md); color: var(--text); user-select: none; }
+
+.box {
+  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 0;
+  width: 18px; height: 18px; border: none; cursor: inherit;
+  background: var(--surface-input); color: var(--on-accent);
+  border-radius: var(--radius-sm); box-shadow: var(--edge);
+  transition: background var(--transition-fast);
+}
+.box:hover:not(:disabled) { background: var(--bg-active); }
+.box:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.box[data-state="checked"], .box[data-state="indeterminate"] { background: var(--accent); }
+.indicator { display: inline-flex; }

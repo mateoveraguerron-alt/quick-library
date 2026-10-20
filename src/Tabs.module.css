@@ -1,0 +1,11 @@
+.list { display: inline-flex; gap: 2px; padding: 3px; background: var(--bg-secondary); border-radius: var(--radius-md); box-shadow: var(--edge); }
+.trigger {
+  display: inline-flex; align-items: center; gap: var(--space-xs);
+  padding: 6px 14px; border: none; cursor: pointer; background: transparent;
+  color: var(--text-muted); font-family: var(--font-family); font-size: var(--font-md); font-weight: 500;
+  border-radius: var(--radius-sm); transition: background var(--transition-fast), color var(--transition-fast);
+}
+.trigger:hover { color: var(--text); background: var(--bg-hover); }
+.trigger[data-state="active"] { background: var(--bg-active); color: var(--text); }
+.trigger:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 1px; }
+.content { margin-top: var(--space-md); outline: none; }

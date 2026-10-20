@@ -1,0 +1,8 @@
+.wrap { display: flex; flex-direction: column; gap: var(--space-xs); width: 100%; }
+.top { display: flex; justify-content: space-between; align-items: baseline; }
+.track { height: 8px; background: var(--bg-muted); border-radius: var(--radius-full); overflow: hidden; }
+.fill { height: 100%; border-radius: var(--radius-full); transition: width var(--transition-base); }
+.accent { background: var(--accent); }
+.success { background: var(--success); }
+.warning { background: var(--warning); }
+.error { background: var(--error); }

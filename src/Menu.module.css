@@ -1,0 +1,24 @@
+.content {
+  z-index: var(--z-popover); min-width: 180px; padding: var(--space-sm);
+  background: var(--surface-floating); border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg), var(--edge);
+  animation: pop var(--transition-fast);
+}
+.item {
+  display: flex; align-items: center; gap: var(--space-sm);
+  padding: 6px 10px; border-radius: var(--radius-sm); cursor: pointer; outline: none; user-select: none;
+  font-size: var(--font-md); color: var(--text);
+}
+.item[data-highlighted] { background: var(--bg-hover); }
+.item[data-disabled] { opacity: 0.45; pointer-events: none; }
+.danger { color: var(--error); }
+.danger[data-highlighted] { background: var(--error-bg); }
+.separator { height: 1px; margin: var(--space-xs) 0; background: var(--bg-hover); }
+
+@keyframes pop { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+
+.anchor {
+  position: fixed; /* Hace que responda fielmente a top y left de la pantalla */
+  pointer-events: none; /* Evita que interfiera con los clics del usuario */
+  display: block;
+}

@@ -1,0 +1,25 @@
+.card { border-radius: var(--radius-lg); color: var(--text); transition: background var(--transition-fast); }
+
+.default { background: var(--bg-secondary); box-shadow: var(--edge); }
+.muted   { background: var(--bg-muted);     box-shadow: var(--edge); }
+.flat    { background: var(--bg); }
+
+.pad-none { padding: 0; }
+.pad-sm { padding: var(--space-sm); }
+.pad-md { padding: var(--space-md); }
+.pad-lg { padding: var(--space-lg); }
+
+.elevated { box-shadow: var(--shadow-card), var(--edge); }
+
+.interactive { cursor: pointer; }
+.interactive:hover { background: var(--bg-hover); }
+.interactive:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+
+.header { display: flex; align-items: center; gap: var(--space-sm); }
+.headerIcon {
+  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+  width: 36px; height: 36px; border-radius: var(--radius-md);
+  background: var(--bg-muted); color: var(--accent);
+}
+.headerText { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.headerAction { display: flex; align-items: center; gap: var(--space-xs); flex-shrink: 0; }

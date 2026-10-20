@@ -1,0 +1,57 @@
+/* ═══════════════════════════════════════════════════════════════
+   ui.css — base global de la librería UI de Quickfy.
+   Se importa UNA sola vez (main.tsx). Las variables de tema (--bg, --text,
+   --accent, --font-md, --radius-md...) las escribe initCssVars() desde los stores.
+   ═══════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-family);
+  font-size: var(--font-md);
+}
+
+/* Tokens DERIVADOS: viven en CSS porque dependen de los del tema.
+   Para cambiar el look de todas las superficies flotantes, toca solo aquí. */
+:root {
+  --surface-input: var(--bg-muted);        /* fondo de inputs, selects, checkbox */
+  --surface-floating: var(--bg-secondary); /* menús, selects, popovers, diálogos */
+  --overlay: rgba(0, 0, 0, 0.5);
+  --focus-ring: var(--accent);
+  --syntax-keyword: #c586c0;
+  --syntax-string: #ce9178;
+  --syntax-number: #b5cea8;
+  --syntax-comment: #6a9955;
+  --syntax-function: #dcdcaa;
+  --syntax-title: #4fc1e0;
+
+  /* "Borde" que solo existe en temas de alto contraste (ver abajo).
+     Es un inset box-shadow, no un border: no ocupa espacio ni rompe la regla sin bordes. */
+  --ui-edge: 0px;
+  --edge: inset 0 0 0 var(--ui-edge) var(--border);
+
+  --z-dialog: 1000;
+  --z-popover: 1100;
+  --z-tooltip: 1200;
+}
+
+/* Excepciones por tema: el único lugar donde se permite "borde" visual. */
+:root[data-theme="highContrast"] { --ui-edge: 1px; }
+
+/* Scrollbars acordes al tema */
+* { scrollbar-width: thin; scrollbar-color: var(--bg-active) transparent; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--bg-active); border-radius: var(--radius-full); }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* Respeta "reducir movimiento" del sistema */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

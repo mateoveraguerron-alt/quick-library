@@ -1,0 +1,20 @@
+.content {
+    z-index: var(--z-popover);
+    padding: var(--space-sm);
+    border-radius: var(--radius-lg);
+    background: var(--surface-floating);
+    box-shadow: var(--shadow-lg), var(--edge);
+    color: var(--text);
+    font-family: var(--font-family);
+    outline: none;
+    transform-origin: var(--radix-popover-content-transform-origin);
+  }
+  
+  .content[data-state='open'] {
+    animation: pop var(--transition-fast);
+  }
+  
+  @keyframes pop {
+    from { opacity: 0; transform: scale(0.97); }
+    to   { opacity: 1; transform: scale(1); }
+  }

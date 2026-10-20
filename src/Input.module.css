@@ -1,0 +1,27 @@
+/* Este archivo lo comparten Input y Textarea. */
+.control {
+  position: relative; display: flex; align-items: center;
+  background: var(--surface-input); border-radius: var(--radius-md); box-shadow: var(--edge);
+  transition: background var(--transition-fast);
+}
+.control:hover { background: var(--bg-hover); }
+.control:focus-within { outline: 2px solid var(--focus-ring); outline-offset: 1px; }
+.invalid, .invalid:hover { background: var(--error-bg); }
+
+.input {
+  flex: 1; min-width: 0; width: 100%;
+  background: transparent; border: none; outline: none;
+  color: var(--text); font-family: var(--font-family);
+}
+.input::placeholder { color: var(--text-muted); }
+.input:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.sm .input { padding: 4px 10px;  font-size: var(--font-sm); }
+.md .input { padding: 8px 12px;  font-size: var(--font-md); }
+.lg .input { padding: 12px 14px; font-size: var(--font-lg); }
+
+.icon { position: absolute; left: 10px; color: var(--text-muted); pointer-events: none; }
+.hasIcon { padding-left: 34px !important; }
+.trailing { display: flex; align-items: center; flex-shrink: 0; padding-right: 6px; }
+
+.textarea { resize: vertical; min-height: 72px; line-height: 1.5; }
