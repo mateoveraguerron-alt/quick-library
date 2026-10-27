@@ -16,7 +16,8 @@ import {
   Columns3, Package, Database, Keyboard, Images, Puzzle,Code,Merge, Focus, MoreHorizontal, Tag, ExternalLink,Unlink,Sheet, LayoutTemplate, History , CheckCircle2,  Circle, 
   FileType, AlignLeft, ToggleLeft, ArrowLeftRight, PenLine, Zap , FolderOpen, Cloud, Book ,Repeat, Mail , Receipt, FolderPlus ,  Image , Video, File ,  Target , 
   Bold , Italic , Heading1 , Heading2, Heading3, ListOrdered , Strikethrough, Underline, Highlighter, Quote, Superscript, Subscript,
-  CheckSquare , Link , AlignCenter ,AlignRight , Timer , ZoomOut , ZoomIn ,
+  CheckSquare , Link , AlignCenter ,AlignRight , Timer , ZoomOut , ZoomIn , PanelLeft ,  FilePlus, Workflow , Spline, Pilcrow, ListTodo, Bug , Rocket, CircleDot, Ban, Columns2 , 
+  ClipboardCopy, Replace, ReplaceAll,
   type LucideProps
 } from 'lucide-react'
 
@@ -44,7 +45,9 @@ const ICONS = {
   Columns3, Package, Database, Keyboard, Images, Puzzle,Code,Merge , Focus, MoreHorizontal , Tag , ExternalLink,Unlink,Sheet,LayoutTemplate, History,CheckCircle2, Circle 
   ,FileType ,AlignLeft , ToggleLeft , ArrowLeftRight, PenLine , Zap , FolderOpen , Cloud, Book , Repeat, Mail , Receipt , FolderPlus , Image , Video , File , Target,
   Bold , Italic , Heading1, Heading2, Heading3, ListOrdered , Strikethrough, Underline,Highlighter, Quote, Superscript, Subscript,
-  CheckSquare , Link , AlignCenter ,AlignRight , Timer,  ZoomOut , ZoomIn
+  CheckSquare , Link , AlignCenter ,AlignRight , Timer,  ZoomOut , ZoomIn , PanelLeft , FilePlus , Workflow , Spline , Pilcrow , ListTodo , Bug , Rocket ,CircleDot  , Ban , Columns2,
+  ClipboardCopy, Replace, ReplaceAll,
+  
 }
 
 export type IconName = keyof typeof ICONS
