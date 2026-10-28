@@ -17,14 +17,15 @@ export interface ContextMenuProps {
   items: ContextMenuItemDef[]
   /** Elemento que abre el menú con click derecho (debe aceptar ref) */
   children: ReactElement
+  className?:string
 }
 
-export function ContextMenu({ items, children }: ContextMenuProps) {
+export function ContextMenu({ items, children , className }: ContextMenuProps) {
   return (
     <RCM.Root>
       <RCM.Trigger asChild>{children}</RCM.Trigger>
       <RCM.Portal>
-        <RCM.Content className={styles.content} alignOffset={4}>
+        <RCM.Content className={`${styles.content} ${className || ''}`} alignOffset={4}>
           {items.map((item, i) =>
             item.separator ? (
               <RCM.Separator key={`sep-${i}`} className={styles.separator} />
